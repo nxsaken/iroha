@@ -253,6 +253,11 @@ members = [
     "wasm_codec/derive",
     "wasm_builder",
 ]
+exclude = [
+    # needs to be excluded because client depends on it, automatically making it a member
+    "client/tests/integration/smartcontracts/executor_custom_data_model",
+    "client/tests/integration/smartcontracts",
+]
 
 [profile.deploy]
 inherits = "release"
